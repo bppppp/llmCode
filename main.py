@@ -1,9 +1,10 @@
+import time
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_core.runnables import RunnableLambda
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import AIMessage, HumanMessage
-import time
+# import time
 
 # 创建大预言模型链接
 llm = ChatOpenAI(
@@ -21,7 +22,7 @@ prompt = ChatPromptTemplate.from_messages([
     MessagesPlaceholder(variable_name="chat_history"),  # 历史消息占位符
     ("user", "{input}")
 ])
-
+prompt.invoke
 # 模拟对话历史
 chat_history = [
     HumanMessage(content="直接输出符合需求的代码即可，除非我在需求中明确要求了，非则不需要对代码进行解释，也不需要给出运行案例。"),
