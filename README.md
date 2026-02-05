@@ -1,1 +1,1 @@
-本地搭建一个基于langchain的大模型架构，使用的大模型api为deepSeek-code，本模型主要使用在前端代码的自动生成
+本地搭建一个基于langchain的大模型架构，使用的大模型api为deepSeek-code，本模型为一个基于数据向量化匹配以及历史对话存储功能的single chain模型
